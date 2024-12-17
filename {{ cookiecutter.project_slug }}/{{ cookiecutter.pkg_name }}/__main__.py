@@ -3,7 +3,7 @@ import sys
 
 def main():
     # Your code here
-    ...
+    print("Starting app...")
     return 0
 
 

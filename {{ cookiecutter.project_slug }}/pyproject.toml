@@ -6,19 +6,15 @@ build-backend = "setuptools.build_meta"
 include = ["{{ cookiecutter.pkg_name }}/*"]
 exclude = ["tests/*"]
 
-#[tool.setuptools_scm]
-#write_to = "{{ cookiecutter.pkg_name }}/__version__.py"
-
 [project]
 name = "{{ cookiecutter.pkg_name }}"
-description = ""
+description = "{{ cookiecutter.description }}"
 readme = "README.md"
 requires-python = ">=3.7"
 keywords = ["one", "two"]
 license = {text = "BSD 3-Clause License"}
-dynamic = ["version"]
+version = "0.0.1"
 classifiers = [
-    "Framework :: Typer",
     "Programming Language :: Python :: 3",
 ]
 dependencies = [
@@ -28,7 +24,7 @@ dependencies = [
 [project.optional-dependencies]
 test = [
     "pytest",
-    "pdbpp"
+    "ipdb"
 ]
 
 [project.scripts]
